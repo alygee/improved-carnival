@@ -1,0 +1,11 @@
+.has-quick-display {
+  .table-wrapper {
+    width: 50%;
+    transition: width 1s;
+  }
+  .quick-display-wrapper {
+    width: 50%;
+    visibility: visible;
+    transition: width 1s;
+  }
+}

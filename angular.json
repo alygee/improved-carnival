@@ -15,7 +15,7 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/piano",
             "index": "src/index.html",
@@ -142,5 +142,8 @@
       }
     }
   },
-  "defaultProject": "piano"
+  "defaultProject": "piano",
+  "cli": {
+    "analytics": false
+  }
 }
