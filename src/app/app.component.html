@@ -1,13 +1,5 @@
-<a [routerLink]="['']">Home</a>
-<a [routerLink]="[{outlets: {primary: 'questions', aux: 'quick-display'}}]">Open Chat</a>
-<a [routerLink]="[{outlets: {aux: null}}]">Close Chat</a>
-<br/>
 <div class="my-10 container mx-auto h-auto flex justify-center">
-  <div class="w-1/2 table-wrapper">
-    <router-outlet></router-outlet>
-  </div>
-  <div class="w-1/2 bg-blue-100 quick-display-wrapper">
-    <router-outlet name="aux"></router-outlet>
-  </div>
+  <router-outlet></router-outlet>
+  <router-outlet name="aux"></router-outlet>
 </div>
 

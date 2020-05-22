@@ -13,8 +13,6 @@ export class QuestionsService {
   constructor(private http: HttpClient) { }
 
   search(intitle: string) {
-    return mock;
-
     const url = `${this.host}/2.2/search?order=desc&sort=activity&site=stackoverflow&intitle=${intitle}`;
 
     return this.http.get(url)
@@ -24,8 +22,6 @@ export class QuestionsService {
   }
 
   questions() {
-    return mock;
-
     const url = `${this.host}/2.2/questions?order=desc&sort=activity&site=stackoverflow`;
 
     return this.http.get(url)

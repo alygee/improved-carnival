@@ -10,7 +10,11 @@
     <div class="flex items-center">
       <div class="text-sm">
         <p class="text-gray-900">
-          Author <a [routerLink]="" (click)="showUserHistory(question.owner.user_id)" class="text-blue-500 hover:text-blue-400">{{ question.owner.display_name }}</a>
+          Author
+          <a [routerLink]=""
+             (click)="navigateToAuthorQuestions(question.owner.user_id)"
+             class="text-blue-500 hover:text-blue-400"
+          >{{ question.owner.display_name }}</a>
         </p>
         <p class="text-gray-900">
           <a href="#" class="text-blue-500 hover:text-blue-400">{{ question.answer_count }} answer(s)</a>
@@ -18,7 +22,8 @@
         <p>
           <a
             *ngFor="let tag of question.tags"
-            [routerLink]="['/questions', { outlets: { aux: ['tag/javascript'] }}]"
+            [routerLink]=""
+            (click)="navigateToTagQuestions(tag)"
             class="my-2 mr-2 text-blue-900 hover:text-white hover:bg-blue-900 border border-blue-900 text-xs font-semibold rounded-lg px-4 py-1"
           >{{ tag }}</a>
         </p>

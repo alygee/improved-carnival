@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {Question} from '../../services/Question';
 import {QuestionsService} from '../../services/questions.service';
-import mock from '../../services/mock';
 
 @Component({
   selector: 'app-questions',
@@ -31,12 +30,11 @@ export class QuestionsComponent implements OnInit {
   }
 
   private fetchQuestions() {
-    this.questions = mock.items;
-    // this.questionsService
-    //   .questions()
-    //   .subscribe((response) => {
-    //     this.questions = response['items'];
-    //   });
+    this.questionsService
+      .questions()
+      .subscribe((response) => {
+        this.questions = response['items'];
+      });
   }
 
   onOpen(payload) {

@@ -8,7 +8,8 @@ const routes: Routes = [
   {path: '',  redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomePageComponent},
   {path: 'questions', component: QuestionsComponent},
-  {path: 'quick-display', component: QuickDisplayComponent, outlet: 'aux'}
+  {path: 'questions/tag/:tag', component: QuickDisplayComponent, outlet: 'aux'},
+  {path: 'questions/author/:author', component: QuickDisplayComponent, outlet: 'aux'}
 ];
 
 @NgModule({

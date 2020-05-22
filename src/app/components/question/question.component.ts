@@ -17,27 +17,12 @@ export class QuestionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showUserHistory(userId) {
-    this.questionsService
-      .userHistory(userId)
-      .subscribe((response) => {
-        this.open.emit({
-          items: response['items'],
-          title: 'User history'
-        });
-      });
+  navigateToAuthorQuestions(userId) {
+    this.router.navigate([{outlets: {primary: 'questions', aux: `questions/author/${userId}`}}]);
   }
 
-  showTagQuestions(tag) {
-    this.router.navigate([`/questions/tag/${tag}`]);
-    // this.questionsService
-    //   .tagQuestions(tag)
-    //   .subscribe((response) => {
-    //     this.open.emit({
-    //       items: response['items'],
-    //       title: 'Questions on the tag'
-    //     });
-    //   });
+  navigateToTagQuestions(tag) {
+    this.router.navigate([{outlets: {primary: 'questions', aux: `questions/tag/${tag}`}}]);
   }
 
 }

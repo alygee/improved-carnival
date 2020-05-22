@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 import {QuestionsService} from '../../services/questions.service';
-import mock from '../../services/mock';
 
 @Component({
   selector: 'app-home-page',
@@ -14,16 +13,16 @@ export class HomePageComponent {
   constructor(private router: Router, private questionsService: QuestionsService) {}
 
   navigateToQuestions() {
-    // this.questionsService
-    //   .search(this.intitle)
-    //   .subscribe((response) => {
+    this.questionsService
+      .search(this.intitle)
+      .subscribe((response) => {
         this.router.navigate(['questions'], {
           state: {
-            items: mock.items,
+            items: response['items'],
             intitle: this.intitle
           }
         });
-    //   });
+      });
   }
 
 }
