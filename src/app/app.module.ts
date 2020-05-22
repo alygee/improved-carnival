@@ -16,7 +16,7 @@ import {FormsModule} from '@angular/forms';
     HomePageComponent,
     QuestionsComponent,
     QuestionComponent,
-    QuickDisplayComponent
+    QuickDisplayComponent,
   ],
   imports: [
     BrowserModule,

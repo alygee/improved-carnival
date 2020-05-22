@@ -16,12 +16,11 @@
           <a href="#" class="text-blue-500 hover:text-blue-400">{{ question.answer_count }} answer(s)</a>
         </p>
         <p>
-          <button
-            type="button"
+          <a
             *ngFor="let tag of question.tags"
-            (click)="showTagQuestions(tag)"
+            [routerLink]="['/questions', { outlets: { aux: ['tag/javascript'] }}]"
             class="my-2 mr-2 text-blue-900 hover:text-white hover:bg-blue-900 border border-blue-900 text-xs font-semibold rounded-lg px-4 py-1"
-          >{{ tag }}</button>
+          >{{ tag }}</a>
         </p>
       </div>
     </div>
