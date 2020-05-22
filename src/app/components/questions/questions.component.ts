@@ -9,11 +9,8 @@ import {QuestionsService} from '../../services/questions.service';
   styleUrls: ['./questions.component.scss']
 })
 export class QuestionsComponent implements OnInit {
-  hasQuickDisplay = false;
   questions: Question[];
-  quickDisplayItems: Question[];
   intitle: string;
-  quickDisplayTitle: string;
 
   constructor(private router: Router, private questionsService: QuestionsService) {
     const state = this.router.getCurrentNavigation().extras.state;
@@ -35,12 +32,6 @@ export class QuestionsComponent implements OnInit {
       .subscribe((response) => {
         this.questions = response['items'];
       });
-  }
-
-  onOpen(payload) {
-    this.quickDisplayItems = payload.items;
-    this.quickDisplayTitle = payload.title;
-    this.hasQuickDisplay = true;
   }
 
 }

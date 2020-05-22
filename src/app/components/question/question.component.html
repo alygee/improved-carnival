@@ -2,7 +2,7 @@
   <div class="rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
     <div class="mb-4">
       <div class="font-bold text-xl mb-2">
-        <a [routerLink]="" class="text-blue-500 hover:text-blue-400">
+        <a [routerLink]="'/question/' + question.question_id" class="text-blue-500 hover:text-blue-400">
           <span [innerHTML]="question.title"></span>
         </a>
       </div>

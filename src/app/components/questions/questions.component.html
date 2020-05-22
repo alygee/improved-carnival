@@ -5,7 +5,7 @@
 <table class="table-auto bg-white mx-auto w-full">
   <tbody>
     <tr *ngFor="let question of questions" class="border-solid border-b">
-      <app-question [question]="question" (open)="onOpen($event)"></app-question>
+      <app-question [question]="question"></app-question>
     </tr>
   </tbody>
 </table>

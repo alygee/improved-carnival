@@ -47,6 +47,14 @@ export class QuestionsService {
       );
   }
 
+  answers(ids) {
+    const url = `${this.host}/2.2/questions/${ids}/answers?order=desc&sort=activity&site=stackoverflow`;
+    return this.http.get(url)
+      .pipe(
+        catchError(this.handleError) // then handle the error
+      );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.

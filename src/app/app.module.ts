@@ -10,6 +10,8 @@ import { QuestionComponent } from './components/question/question.component';
 import { QuickDisplayComponent } from './components/quick-display/quick-display.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { DetailsComponent } from './components/details/details.component';
+import { AnswerComponent } from './components/answer/answer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import {FormsModule} from '@angular/forms';
     QuestionsComponent,
     QuestionComponent,
     QuickDisplayComponent,
+    DetailsComponent,
+    AnswerComponent,
   ],
   imports: [
     BrowserModule,

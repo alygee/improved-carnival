@@ -1,0 +1,10 @@
+<h2 class="text-center text-xl bg-white py-5" *ngIf="!answers.length">
+  Question has no answers!
+</h2>
+<table class="table-auto bg-white mx-auto w-full">
+  <tbody>
+  <tr *ngFor="let answer of answers" class="border-solid border-b">
+    <app-answer [answer]="answer"></app-answer>
+  </tr>
+  </tbody>
+</table>
