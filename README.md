@@ -1,5 +1,5 @@
 # Interface for search on stackoverflow.
-Link to demo: http://piano-test.albert-allagulov.com
+Link to demo: https://github.com/alygee/improved-carnival/edit/master/README.md
 
 The interface contains several screens:
  - Input to enter the word that will be contained in the title of the question
