@@ -1,5 +1,5 @@
 # Interface for search on stackoverflow.
-Link to demo: https://github.com/alygee/improved-carnival/edit/master/README.md
+Link to demo: https://angular-stackoverflow-test.web.app
 
 The interface contains several screens:
  - Input to enter the word that will be contained in the title of the question
